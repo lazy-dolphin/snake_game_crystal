@@ -82,6 +82,7 @@ class Game
 	def initialize
 		@game_over = false
 		@snake = Snake.new
+		system "clear"
 	end
 	def game_over?
 		if (
@@ -125,6 +126,7 @@ class Game
 	end
 	def draw
 		until @game_over
+			print "\033[0;0H"
 			draw_upper_border
 			draw_middle_area
 			draw_lower_border
